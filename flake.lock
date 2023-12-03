@@ -1,0 +1,59 @@
+{
+  "nodes": {
+    "dm-mono": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1636197487,
+        "narHash": "sha256-CzaQMqJuMU1OmOjjVfAeb1nzhxy7zmQozjGSk510o5Q=",
+        "owner": "ylieder",
+        "repo": "dm-mono-nerd-font",
+        "rev": "474a1f45cac18791dd6fd8a9f81732b0e8779717",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ylieder",
+        "repo": "dm-mono-nerd-font",
+        "type": "github"
+      }
+    },
+    "mkflake": {
+      "locked": {
+        "lastModified": 1701091410,
+        "narHash": "sha256-EQU1LC0wTuaWOjOsxaugBBViOxhxTgLW5AAZLEmaoc8=",
+        "owner": "jonascarpay",
+        "repo": "mkflake",
+        "rev": "37b4828c4a01586a16401c26165aac358a2ac645",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jonascarpay",
+        "repo": "mkflake",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1701611618,
+        "narHash": "sha256-ZJFsIKqLvfsuLbluG664491hiN6IOoEFLAL++asj03o=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "dccb94abdc3a8452e436f58ac7c4a43415b8102f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "dm-mono": "dm-mono",
+        "mkflake": "mkflake",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
