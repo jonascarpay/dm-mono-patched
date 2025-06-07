@@ -10,14 +10,8 @@ out = Path(os.getenv("out")) / "share" / "fonts" / "truetype"
 
 out.mkdir(parents=True, exist_ok=False)
 
-
 for p in dm_mono.glob("*.ttf"):
     variant = re.match("DM Mono Nerd Font (.*).ttf", p.name)[1]
-    # replace_missing_glyphs(
-    #     dm_mono / f"DM Mono Nerd Font {variant}.ttf",
-    #     scp / f"SauceCodeProNerdFontMono-{variant.replace(' ','')}.ttf",
-    #     out / f"DM Mono Nerd Font {variant}.ttf",
-    # )
     print(variant)
     Merger().merge(
         [

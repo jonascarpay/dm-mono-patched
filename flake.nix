@@ -15,21 +15,14 @@
         pkgs = import nixpkgs { inherit system; };
         python = pkgs.python3.withPackages (p: [ p.fonttools ]);
         DM_MONO = "${dm-mono}/DMMonoNerdFont";
-        SAUCECODE =
-          let nerdfonts = pkgs.nerdfonts.override { fonts = [ "SourceCodePro" ]; };
-          in "${nerdfonts}/share/fonts/truetype/NerdFonts";
+        SAUCECODE = "${pkgs.nerd-fonts.sauce-code-pro}/share/fonts/truetype/NerdFonts/SauceCodePro";
       in
       {
         devShells.default = pkgs.mkShell {
           inherit DM_MONO SAUCECODE;
           packages = [
-            pkgs.black
+            python
             pkgs.ruff
-            (pkgs.python3.withPackages (p: [
-              p.fonttools
-              p.ipython
-              p.ruff-lsp
-            ]))
             pkgs.pyright
           ];
         };
